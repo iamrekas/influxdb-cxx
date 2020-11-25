@@ -23,7 +23,7 @@ Point::Point(const std::string& measurement) :
   mFields = {};
 }
 
-Point&& Point::addField(std::string_view name, double value, int prec = 2)
+Point&& Point::addField(std::string_view name, double value, int prec)
 {
   std::stringstream convert;
   if (!mFields.empty()) convert << ",";
