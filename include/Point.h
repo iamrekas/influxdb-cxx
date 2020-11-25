@@ -15,7 +15,7 @@ namespace influxdb
 /// \brief Represents a point
 class Point
 {
-  typedef std::variant<int, short, long int, long long int, std::string, bool> PointVariant 
+  typedef std::variant<int, short, long int, long long int, std::string, bool> PointVariant;
   public:
     /// Constructs point based on measurement name
     Point(const std::string& measurement);
