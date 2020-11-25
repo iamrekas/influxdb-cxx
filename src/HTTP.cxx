@@ -87,7 +87,7 @@ std::string HTTP::query(const std::string& query)
 
 void HTTP::setAuthToken(const std::string& token) {
   struct curl_slist* headers = NULL;
-  headers = curl_slist_append(headers, "Authorization: Token "+token);
+  headers = curl_slist_append(headers, string("Authorization: Token "+token).c_str());
   curl_easy_setopt(writeHandle, CURLOPT_HTTPHEADER, headers);
   curl_easy_setopt(readHandle, CURLOPT_HTTPHEADER, headers);
 }
