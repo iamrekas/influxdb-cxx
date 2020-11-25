@@ -22,6 +22,10 @@ class Transport
     /// Sends string blob
     virtual void send(std::string&& message) = 0;
 
+    virtual void setAuthToken(const std::string& /*token*/) {
+      throw std::runtime_error("Auth tokens are not supported in the selected transport");
+    }
+
     /// Sends s request
     virtual std::string query(const std::string& /*query*/) {
       throw std::runtime_error("Queries are not supported in the selected transport");

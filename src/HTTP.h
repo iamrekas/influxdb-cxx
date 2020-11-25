@@ -29,6 +29,8 @@ class HTTP : public Transport
     ///  \throw InfluxDBException	when CURL fails on POSTing or response code != 200
     void send(std::string&& post) override;
 
+    void setAuthToken(const std::string& token) override;
+
     /// Queries database
     /// \throw InfluxDBException	when CURL GET fails
     std::string query(const std::string& query) override;
