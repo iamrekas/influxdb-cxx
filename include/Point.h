@@ -15,6 +15,7 @@ namespace influxdb
 /// \brief Represents a point
 class Point
 {
+  typedef std::variant<int, short, long int, long long int, std::string, bool> PointVariant 
   public:
     /// Constructs point based on measurement name
     Point(const std::string& measurement);
@@ -26,7 +27,8 @@ class Point
     Point&& addTag(std::string_view key, std::string_view value);
 
     /// Adds filed
-    Point&& addField(std::string_view name, std::variant<int, long long int, std::string, double> value);
+    Point&& addField(std::string_view name, double value, int prec = 2);
+    Point&& addField(std::string_view name, PointVariant value);
 
     /// Generetes current timestamp
     static auto getCurrentTimestamp() -> decltype(std::chrono::system_clock::now());

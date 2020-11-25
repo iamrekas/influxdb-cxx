@@ -23,7 +23,21 @@ Point::Point(const std::string& measurement) :
   mFields = {};
 }
 
-Point&& Point::addField(std::string_view name, std::variant<int, long long int, std::string, double> value)
+Point&& Point::addField(std::string_view name, double value, int prec = 2)
+{
+  std::stringstream convert;
+  if (!mFields.empty()) convert << ",";
+
+  convert << name << "=";
+  convert.precision(prec);
+  convert.setf(std::ios::fixed);
+  convert << value;
+
+  mFields += convert.str();
+  return std::move(*this);
+}
+
+Point&& Point::addField(std::string_view name, PointVariant value)
 {
   std::stringstream convert;
   if (!mFields.empty()) convert << ",";
@@ -31,9 +45,11 @@ Point&& Point::addField(std::string_view name, std::variant<int, long long int, 
   convert << name << "=";
   std::visit(overloaded {
     [&convert](int value) { convert << value << 'i'; },
+    [&convert](short value) { convert << value << 'i'; },
+    [&convert](long int value) { convert << value << 'i'; },
     [&convert](long long int value) { convert << value << 'i'; },
-    [&convert](double value) { convert << value; },
     [&convert](const std::string& value) { convert << '"' << value << '"'; },
+    [&convert](bool value) { convert << (value?"t":"f"); }
     }, value);
   mFields += convert.str();
   return std::move(*this);
@@ -87,3 +103,4 @@ std::string Point::getTags() const
 }
 
 } // namespace influxdb
+
