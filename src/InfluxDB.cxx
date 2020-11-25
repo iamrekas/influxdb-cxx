@@ -77,6 +77,10 @@ void InfluxDB::write(Point&& metric)
   }
 }
 
+void InfluxDB::setAuthToken(const std::string& token) {
+  mTransport->setAuthToken(token);
+}
+
 #ifdef INFLUXDB_WITH_BOOST
 std::vector<Point> InfluxDB::query(const std::string&  query)
 {

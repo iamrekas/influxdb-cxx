@@ -51,6 +51,8 @@ class InfluxDB
     /// \param value
     void addGlobalTag(std::string_view name, std::string_view value);
 
+    void setAuthToken(const std::string& token);
+
   private:
     /// Buffer for points
     std::deque<std::string> mBuffer;
