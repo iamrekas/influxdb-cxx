@@ -91,6 +91,8 @@ target_include_directories(InfluxDB
 
 # Link targets
 target_link_libraries(InfluxDB
+  PUBLIC
+    pthread gcov
   PRIVATE
     $<$<BOOL:${Boost_FOUND}>:Boost::system>
     CURL::libcurl
