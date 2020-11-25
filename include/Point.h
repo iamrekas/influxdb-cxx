@@ -27,7 +27,7 @@ class Point
     Point&& addTag(std::string_view key, std::string_view value);
 
     /// Adds filed
-    Point&& addField(std::string_view name, double value, int prec = 2);
+    Point&& addField(std::string_view name, double value, int prec);
     Point&& addField(std::string_view name, PointVariant value);
 
     /// Generetes current timestamp
