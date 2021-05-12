@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20210104-0933-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.13.4"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Linux"
+	Hostname="e7cd43bfab27"
+	OSRelease="5.4.0-54-generic"
+	OSVersion="#60-Ubuntu SMP Fri Nov 6 10:37:59 UTC 2020"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="58"
+	ProcessorCacheSize="3072"
+	NumberOfLogicalCPU="4"
+	NumberOfPhysicalCPU="2"
+	TotalVirtualMemory="15258"
+	TotalPhysicalMemory="31814"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="3300.2"
+	>
+	<Testing>
+		<StartDateTime>Jan 04 13:33 UTC</StartDateTime>
+		<StartTestTime>1609767210</StartTestTime>
+		<TestList>
+			<Test>./testPoint</Test>
+			<Test>./testHttp</Test>
+			<Test>./testUdp</Test>
+			<Test>./testFactory</Test>
+			<Test>./testQuery</Test>
+		</TestList>
+		<Test Status="failed">
+			<Name>testPoint</Name>
+			<Path>.</Path>
+			<FullName>./testPoint</FullName>
+			<FullCommandLine>/workspace/influxdb-cxx/build/bin/testPoint</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>Failed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>201</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0181828</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/workspace/influxdb-cxx/build/bin/testPoint</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzFkj1PwzAQhvf8hS6HJ4jAiesW0URZEAsbQmxRB2NfG6uug/wB+fkkQZQwtAgWlpPu/OrueSQ/Rmu13cICAvoAUnj0lNIke2vdzr8IiZm2GxM79Xwluy4bUmN5aLUNtB+dz68vCpjVrOSsXKz26FzrCtAWyJBjpADZoNyBQx9NqNkaqgrIqzARK5ZrAo3wsBHaoIL6c0zzHM4qOKTWszov+Wo48Bs2fnOKbf4T26U68LCjnNPQd+jpyx8FluyUAP8ngeSLKE1T4OPW2DOAcAgKA8rQH+kxQ4MfP2vfqmgQyNPQ3I/Wd7cwipJksvodYRXP6A==</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="failed">
+			<Name>testHttp</Name>
+			<Path>.</Path>
+			<FullName>./testHttp</FullName>
+			<FullCommandLine>/workspace/influxdb-cxx/build/bin/testHttp</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>Failed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>201</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0301432</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/workspace/influxdb-cxx/build/bin/testHttp</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJxNj8FugzAMhu+8Qi8Wp67SgAw0qeE2bVJ3mypuaIcsMWsEdVBiBHv7LVRMvVh2In/+v/NEZOkbnoAxMGgVMGRZlkzUk5sJBqcVW0f74kHCrq3qUtTV8dopVgOg985LsATp7C2jSOPQDdNivqR8X7vXl7dF4xgZ2+ejXhZoT03zIWVAMp8SzhhGRwFBO4MSqkLs2qIuj/FWks/O92FUGvONHhF5TLyWE/OY/b3shVhTirp8jpuDikoX1P3oLLH8j3mTRWL/c3cnWTdXv8PhAAI6ZYfJI9gABhk1o4myfMEb4OrMNCCkTRw2XYhiaXLH/QWN73ON====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>testUdp</Name>
+			<Path>.</Path>
+			<FullName>./testUdp</FullName>
+			<FullCommandLine>/workspace/influxdb-cxx/build/bin/testUdp</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0216267</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/workspace/influxdb-cxx/build/bin/testUdp</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running 2 test cases...
+
+[NON-XML-CHAR-0x1B][1;32;49m*** No errors detected
+[NON-XML-CHAR-0x1B][0;39;49m
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>testFactory</Name>
+			<Path>.</Path>
+			<FullName>./testFactory</FullName>
+			<FullCommandLine>/workspace/influxdb-cxx/build/bin/testFactory</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0407915</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/workspace/influxdb-cxx/build/bin/testFactory</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running 3 test cases...
+
+[NON-XML-CHAR-0x1B][1;32;49m*** No errors detected
+[NON-XML-CHAR-0x1B][0;39;49m
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="failed">
+			<Name>testQuery</Name>
+			<Path>.</Path>
+			<FullName>./testQuery</FullName>
+			<FullCommandLine>/workspace/influxdb-cxx/build/bin/testQuery</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>Failed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>201</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0464201</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/workspace/influxdb-cxx/build/bin/testQuery</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJzNlE1rwjAYx+/9Cl4eenLCql1VZnrbHGw33WQX2SGmT2cwTbo0wfrt10QUHQM38NBLSVqe/8uPNK9WSi4/YQQGKwOMVlhFURRYuZFqK0EoRg1Xsju4IdBZDtMkToeTIqeGCkCtlSbAJYRfFvUuDt0mF7bOVoS8+NX04almWDqNw8dbVtewfF4sZoRwyc2j1eKDwLTRXDX+IJWBqkTGc45ZZzlIk4nzDPpbpTdVSRn2Dy5Oqu+S+8fchYiaV9147OPGaTJ2o4K6bmtkm1Jxacgx7741SqN3J0b/LW94gW+GFuU7ap7vWkMhSS5Q+Bn8Ojg82xnqXOmCSoat4TG8/8upOE1+HSA55QKzebt+kdHkAoyz1FcHcdcaEONLd8VZ6t9BBH7el+71es1t6masxgqoRsjQIDOYOQZmjXuJQmVWIIQLtzn0B+8SBifS31u86kY=</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Jan 04 13:33 UTC</EndDateTime>
+		<EndTestTime>1609767210</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

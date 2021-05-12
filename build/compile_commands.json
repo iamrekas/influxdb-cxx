@@ -1,0 +1,62 @@
+[
+{
+  "directory": "/workspace/influxdb-cxx/build",
+  "command": "/usr/bin/g++-8   -I/workspace/influxdb-cxx/include   -Wall -pedantic -Wextra -g -O0 --coverage -g -fPIE   -std=gnu++17 -o CMakeFiles/benchmark.dir/test/benchmark.cxx.o -c /workspace/influxdb-cxx/test/benchmark.cxx",
+  "file": "/workspace/influxdb-cxx/test/benchmark.cxx"
+},
+{
+  "directory": "/workspace/influxdb-cxx/build",
+  "command": "/usr/bin/g++-8  -DINFLUXDB_WITH_BOOST -DInfluxDB_EXPORTS -I/workspace/influxdb-cxx/include -I/workspace/influxdb-cxx/src -isystem /usr/include/x86_64-linux-gnu   -Wall -pedantic -Wextra -g -O0 --coverage -g -fPIC   -std=gnu++17 -o CMakeFiles/InfluxDB.dir/src/InfluxDB.cxx.o -c /workspace/influxdb-cxx/src/InfluxDB.cxx",
+  "file": "/workspace/influxdb-cxx/src/InfluxDB.cxx"
+},
+{
+  "directory": "/workspace/influxdb-cxx/build",
+  "command": "/usr/bin/g++-8  -DINFLUXDB_WITH_BOOST -DInfluxDB_EXPORTS -I/workspace/influxdb-cxx/include -I/workspace/influxdb-cxx/src -isystem /usr/include/x86_64-linux-gnu   -Wall -pedantic -Wextra -g -O0 --coverage -g -fPIC   -std=gnu++17 -o CMakeFiles/InfluxDB.dir/src/Point.cxx.o -c /workspace/influxdb-cxx/src/Point.cxx",
+  "file": "/workspace/influxdb-cxx/src/Point.cxx"
+},
+{
+  "directory": "/workspace/influxdb-cxx/build",
+  "command": "/usr/bin/g++-8  -DINFLUXDB_WITH_BOOST -DInfluxDB_EXPORTS -I/workspace/influxdb-cxx/include -I/workspace/influxdb-cxx/src -isystem /usr/include/x86_64-linux-gnu   -Wall -pedantic -Wextra -g -O0 --coverage -g -fPIC   -std=gnu++17 -o CMakeFiles/InfluxDB.dir/src/InfluxDBFactory.cxx.o -c /workspace/influxdb-cxx/src/InfluxDBFactory.cxx",
+  "file": "/workspace/influxdb-cxx/src/InfluxDBFactory.cxx"
+},
+{
+  "directory": "/workspace/influxdb-cxx/build",
+  "command": "/usr/bin/g++-8  -DINFLUXDB_WITH_BOOST -DInfluxDB_EXPORTS -I/workspace/influxdb-cxx/include -I/workspace/influxdb-cxx/src -isystem /usr/include/x86_64-linux-gnu   -Wall -pedantic -Wextra -g -O0 --coverage -g -fPIC   -std=gnu++17 -o CMakeFiles/InfluxDB.dir/src/UDP.cxx.o -c /workspace/influxdb-cxx/src/UDP.cxx",
+  "file": "/workspace/influxdb-cxx/src/UDP.cxx"
+},
+{
+  "directory": "/workspace/influxdb-cxx/build",
+  "command": "/usr/bin/g++-8  -DINFLUXDB_WITH_BOOST -DInfluxDB_EXPORTS -I/workspace/influxdb-cxx/include -I/workspace/influxdb-cxx/src -isystem /usr/include/x86_64-linux-gnu   -Wall -pedantic -Wextra -g -O0 --coverage -g -fPIC   -std=gnu++17 -o CMakeFiles/InfluxDB.dir/src/UnixSocket.cxx.o -c /workspace/influxdb-cxx/src/UnixSocket.cxx",
+  "file": "/workspace/influxdb-cxx/src/UnixSocket.cxx"
+},
+{
+  "directory": "/workspace/influxdb-cxx/build",
+  "command": "/usr/bin/g++-8  -DINFLUXDB_WITH_BOOST -DInfluxDB_EXPORTS -I/workspace/influxdb-cxx/include -I/workspace/influxdb-cxx/src -isystem /usr/include/x86_64-linux-gnu   -Wall -pedantic -Wextra -g -O0 --coverage -g -fPIC   -std=gnu++17 -o CMakeFiles/InfluxDB.dir/src/HTTP.cxx.o -c /workspace/influxdb-cxx/src/HTTP.cxx",
+  "file": "/workspace/influxdb-cxx/src/HTTP.cxx"
+},
+{
+  "directory": "/workspace/influxdb-cxx/build",
+  "command": "/usr/bin/g++-8   -I/workspace/influxdb-cxx/include   -Wall -pedantic -Wextra -g -O0 --coverage -g -fPIE   -std=gnu++17 -o CMakeFiles/testPoint.dir/test/testPoint.cxx.o -c /workspace/influxdb-cxx/test/testPoint.cxx",
+  "file": "/workspace/influxdb-cxx/test/testPoint.cxx"
+},
+{
+  "directory": "/workspace/influxdb-cxx/build",
+  "command": "/usr/bin/g++-8   -I/workspace/influxdb-cxx/include   -Wall -pedantic -Wextra -g -O0 --coverage -g -fPIE   -std=gnu++17 -o CMakeFiles/testHttp.dir/test/testHttp.cxx.o -c /workspace/influxdb-cxx/test/testHttp.cxx",
+  "file": "/workspace/influxdb-cxx/test/testHttp.cxx"
+},
+{
+  "directory": "/workspace/influxdb-cxx/build",
+  "command": "/usr/bin/g++-8   -I/workspace/influxdb-cxx/include   -Wall -pedantic -Wextra -g -O0 --coverage -g -fPIE   -std=gnu++17 -o CMakeFiles/testUdp.dir/test/testUdp.cxx.o -c /workspace/influxdb-cxx/test/testUdp.cxx",
+  "file": "/workspace/influxdb-cxx/test/testUdp.cxx"
+},
+{
+  "directory": "/workspace/influxdb-cxx/build",
+  "command": "/usr/bin/g++-8   -I/workspace/influxdb-cxx/include   -Wall -pedantic -Wextra -g -O0 --coverage -g -fPIE   -std=gnu++17 -o CMakeFiles/testQuery.dir/test/testQuery.cxx.o -c /workspace/influxdb-cxx/test/testQuery.cxx",
+  "file": "/workspace/influxdb-cxx/test/testQuery.cxx"
+},
+{
+  "directory": "/workspace/influxdb-cxx/build",
+  "command": "/usr/bin/g++-8   -I/workspace/influxdb-cxx/include   -Wall -pedantic -Wextra -g -O0 --coverage -g -fPIE   -std=gnu++17 -o CMakeFiles/testFactory.dir/test/testFactory.cxx.o -c /workspace/influxdb-cxx/test/testFactory.cxx",
+  "file": "/workspace/influxdb-cxx/test/testFactory.cxx"
+}
+]

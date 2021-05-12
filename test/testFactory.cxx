@@ -11,17 +11,17 @@ namespace test {
 
 BOOST_AUTO_TEST_CASE(unrecognisedBackend)
 {
-  BOOST_CHECK_THROW(influxdb::InfluxDBFactory::Get("httpz://localhost:8086?db=test"), InfluxDBException);
+  BOOST_CHECK_THROW(influxdb::InfluxDBFactory::Get("httpz://influxdb:9999"), InfluxDBException);
 }
 
 BOOST_AUTO_TEST_CASE(missformatedUrl)
 {
-  BOOST_CHECK_THROW(influxdb::InfluxDBFactory::Get("localhost:8086?db=test"), InfluxDBException);
+  BOOST_CHECK_THROW(influxdb::InfluxDBFactory::Get("influxdb:9999"), InfluxDBException);
 }
 
 BOOST_AUTO_TEST_CASE(missingDb)
 {
-  BOOST_CHECK_THROW(influxdb::InfluxDBFactory::Get("http://localhost:8086"), InfluxDBException);
+  BOOST_CHECK_THROW(influxdb::InfluxDBFactory::Get("http://influxdb:9999"), InfluxDBException);
 }
 
 } // namespace test

@@ -10,29 +10,29 @@ namespace test {
 
 BOOST_AUTO_TEST_CASE(write1)
 {
-  auto influxdb = influxdb::InfluxDBFactory::Get("http://localhost:8086?db=test");
+  auto influxdb = influxdb::InfluxDBFactory::Get("http://influxdb:9999?db=test");
   influxdb->write(Point{"test"}
     .addField("value", 10)
-    .addTag("host", "localhost")
+    .addTag("host", "influxdb")
  );
 
   influxdb->write(Point{"test"}
     .addField("value", 20)
-    .addTag("host", "localhost")
+    .addTag("host", "influxdb")
   );
 
   influxdb->write(Point{"test"}
     .addField("value", 200LL)
-    .addTag("host", "localhost"));
+    .addTag("host", "influxdb"));
 
     influxdb->write(Point{"string"}
     .addField("value", "influxdb-cxx")
-    .addTag("host", "localhost"));
+    .addTag("host", "influxdb"));
 }
 
 BOOST_AUTO_TEST_CASE(writeWrongHost)
 {
-  auto influxdb = influxdb::InfluxDBFactory::Get("http://localhost2:8086?db=test");
+  auto influxdb = influxdb::InfluxDBFactory::Get("http://localhost:9999?db=test");
   BOOST_CHECK_THROW(influxdb->write(Point{"test"}.addField("value", 10)), InfluxDBException);
 }
 
