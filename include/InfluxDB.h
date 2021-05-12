@@ -38,6 +38,7 @@ class InfluxDB
 
     /// Queries InfluxDB database
     std::vector<Point> query(const std::string& query);
+    std::vector<Point> query_v1(const std::string& query);
 
     /// Flushes metric buffer (this can also happens when buffer is full)
     void flushBuffer();

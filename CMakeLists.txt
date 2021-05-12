@@ -21,6 +21,16 @@ project(influxdb-cxx
   LANGUAGES CXX
 )
 
+# ---- Include CPM ----
+
+include(cmake/CPM.cmake)
+
+CPMAddPackage(
+  NAME cpr
+  GIT_REPOSITORY https://github.com/whoshuu/cpr.git
+  GIT_TAG 1.6.2
+)
+
 # Documentation dir
 #add_subdirectory(doc)
 
@@ -96,6 +106,7 @@ target_link_libraries(InfluxDB
   PRIVATE
     $<$<BOOL:${Boost_FOUND}>:Boost::system>
     CURL::libcurl
+    cpr::cpr
 )
 
 # Use C++17
@@ -161,12 +172,12 @@ endif()
 unset(isSystemDir)
 
 # Install library
-install(TARGETS InfluxDB
-  EXPORT InfluxDBTargets
-  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
-  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-)
+# install(TARGETS InfluxDB
+#   EXPORT InfluxDBTargets
+#   LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+#   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+#   RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+# )
 
 # Create version file
 include(CMakePackageConfigHelpers)
@@ -179,14 +190,14 @@ write_basic_package_version_file("${CMAKE_CURRENT_BINARY_DIR}/cmake/InfluxDBConf
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/ DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}")
 
 # Export targets
-install(EXPORT InfluxDBTargets
-  FILE
-    InfluxDBTargets.cmake
-  NAMESPACE
-    InfluxData::
-  DESTINATION
-    ${CMAKE_INSTALL_LIBDIR}/cmake/InfluxDB
-)
+# install(EXPORT InfluxDBTargets
+#   FILE
+#     InfluxDBTargets.cmake
+#   NAMESPACE
+#     InfluxData::
+#   DESTINATION
+#     ${CMAKE_INSTALL_LIBDIR}/cmake/InfluxDB
+# )
 
 # Configure and install Config files
 configure_package_config_file(

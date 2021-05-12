@@ -12,55 +12,43 @@
 
 namespace influxdb
 {
-namespace transports
-{
+  namespace transports
+  {
 
-/// \brief HTTP transport
-class HTTP : public Transport
-{
-  public:
-    /// Constructor
-    HTTP(const std::string& url);
+    /// \brief HTTP transport
+    class HTTP : public Transport
+    {
+    public:
+      /// Constructor
+      HTTP(const std::string &url);
 
-    /// Default destructor
-    ~HTTP();
+      /// Default destructor
+      ~HTTP();
 
-    /// Sends point via HTTP POST
-    ///  \throw InfluxDBException	when CURL fails on POSTing or response code != 200
-    void send(std::string&& post) override;
+      /// Sends point via HTTP POST
+      ///  \throw InfluxDBException	when CURL fails on POSTing or response code != 200
+      void send(std::string &&post) override;
 
-    void setAuthToken(const std::string& token) override;
+      void setAuthToken(const std::string &_token) override;
 
-    /// Queries database
-    /// \throw InfluxDBException	when CURL GET fails
-    std::string query(const std::string& query) override;
+      /// Queries database
+      /// \throw InfluxDBException	when CURL GET fails
+      std::string query(const std::string &query) override;
 
-    /// Enable Basic Auth
-    /// \param auth <username>:<password>
-    void enableBasicAuth(const std::string& auth);
+      /// Enable Basic Auth
+      /// \param auth <username>:<password>
+      void enableBasicAuth(const std::string &auth);
 
-    /// Enable SSL
-    void enableSsl();
-  private:
+      /// Enable SSL
+      void enableSsl();
 
-    /// Initilizes CURL for writting and common options
-    /// \throw InfluxDBException	if database (?db=) not specified
-    void initCurl(const std::string& url);
+    private:
+      std::string baseUrl;
 
-    /// Initializes CURL for reading
-    void initCurlRead(const std::string& url);
+      std::string token;
+    };
 
-    /// CURL pointer configured for writting points
-    CURL* writeHandle;
-
-    /// CURL poiter confgured for querying
-    CURL* readHandle;
-
-    /// InfluxDB read URL
-    std::string mReadUrl;
-};
-
-} // namespace transports
+  } // namespace transports
 } // namespace influxdb
 
 #endif // INFLUXDATA_TRANSPORTS_HTTP_H

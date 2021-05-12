@@ -1,1 +1,0 @@
-/usr/bin/g++-8   -Wall -pedantic -Wextra -g -O0 --coverage -g   CMakeFiles/testUdp.dir/test/testUdp.cxx.o  -o bin/testUdp -Wl,-rpath,/workspace/influxdb-cxx/build/lib lib/libInfluxDB.so /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so -lpthread -lgcov 

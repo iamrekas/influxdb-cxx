@@ -1,9 +1,0 @@
-testUdp 10 0.0617763
-testPoint 0 0
-testHttp 0 0
-testQuery 0 0
-testFactory 10 0.0657451
----
-testPoint
-testHttp
-testQuery
